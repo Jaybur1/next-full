@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     /* Paths */
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
-      "@components": ["src/components/*"],
-      "@constants": ["src/constants/*"],
-      "@services": ["src/services/*"],
-      "@utils": ["src/_utils/*"],
-      "@types": ["src/types/*"],
+      "@components/*": ["src/components/*"],
+      "@constants/": ["src/constants/index.ts"],
+      "@services/": ["src/services/index.ts"],
+      "@utils/": ["src/_utils/index.ts"],
+      "@types/": ["src/types/index.ts"],
       "@styles/*": ["styles/*"],
       "@assets/*": ["assets/*"],
       "@test/*": ["test/*"],

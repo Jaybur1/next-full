@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest --env=./test/jest-env.js",
     "lint": "next lint --fix",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
@@ -16,6 +17,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
     "@peculiar/webcrypto": "^1.4.0",
     "@testing-library/dom": "^8.16.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -42,6 +45,7 @@
     "husky": "^8.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
