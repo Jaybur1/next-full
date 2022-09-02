@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '@styles/globals.scss'
 import { ReactElement } from 'react'
 
 import type { AppProps } from 'next/app'

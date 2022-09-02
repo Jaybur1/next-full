@@ -2,5 +2,5 @@
 node_modules
 coverage
 .eslintrc.json
-*.js
+**/*.js
 lib/*
