@@ -10,14 +10,20 @@
     "lint": "next lint --fix",
     "lint:style": "stylelint \"**/*.{scss, css}\" --fix",
     "redis": "docker-compose up -d redis",
+    "db": "docker-compose up -d db",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "prisma:push": "prisma db push",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@next-boost/hybrid-disk-cache": "^0.3.0",
     "@next-boost/next-boost": "^0.15.2",
     "@next-boost/redis-cache": "^0.4.0",
+    "@prisma/client": "^4.3.1",
     "next": "^12.2.5",
+    "next-api-handler": "^0.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -46,6 +52,7 @@
     "eslint-config-next": "12.2.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^3.4.0",
+    "eslint-plugin-check-file": "^1.2.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
@@ -60,6 +67,7 @@
     "postcss-easy-import": "^4.0.0",
     "postcss-nested": "^5.0.6",
     "prettier": "^2.7.1",
+    "prisma": "^4.3.1",
     "sass": "^1.54.8",
     "scss": "^0.2.4",
     "stylelint": "^14.11.0",

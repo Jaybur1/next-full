@@ -33,9 +33,26 @@
       "react-hooks",
       "prettier",
       "import",
-      "jsx-a11y"
+      "jsx-a11y",
+      "check-file"
   ],
   "rules": {
+    "check-file/folder-naming-convention":[
+      "error",
+      {
+        "src/**/!(_utils)*/":"KEBAB_CASE",
+        "pages/**/": "KEBAB_CASE"
+      }
+    ],
+    "check-file/filename-naming-convention":[
+      "error",
+      {
+        "src/components/**/!(index)*.tsx":"PASCAL_CASE",
+        "src/!(components)**/!(i18n)*.{jsx,tsx,ts,js}":"CAMEL_CASE",
+        "pages/**/!(_app|_document)*.{jsx,tsx}":"KEBAB_CASE"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars":["error"],
     "prefer-arrow/prefer-arrow-functions": [
       "error",
       {
@@ -56,7 +73,7 @@
     "@typescript-eslint/explicit-function-return-type": ["error"],
     "prettier/prettier": ["error", {
       "tabWidth": 2,
-      "printWidth": 180,
+      "printWidth": 150,
       "singleQuote": true,
       "trailingComma": "es5",
       "semi": false
