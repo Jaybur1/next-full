@@ -12,8 +12,10 @@
 ---
 # Local setup
 ## Preparation
-1. <b>PLEASE REFER TO THE [WIKI markdown](./docs/WIKI.md) TO UNDERSTAND MORE ON HOW AND WITH WHAT TOOLS THE TEMPLATE IS BUILT AND HOW TO RECREATE IT.</b>
-2. This template is using Next-boost with Redis for caching and Prisma ORM with Postgres which means you will need to run these services (Redis, Postgres) on your local machine, there are 2 ways to do this:
+1. If you prefer recreating the template from scratch, please follow the following [guide](./docs/CREATE_FROM_SCRATCH.md)
+2. (WIP) if you prefer installing the template directly, please run the following command in your terminal: `npx create-next-full`
+4. <b>PLEASE REFER TO THE [WIKI markdown](./docs/WIKI.md) TO UNDERSTAND MORE ON HOW AND WITH WHAT TOOLS THE TEMPLATE IS BUILT.</b>
+3. This template is using Next-boost with Redis for caching and Prisma ORM with Postgres which means you will need to run these services (Redis, Postgres) on your local machine, there are 2 ways to do this:
 
     2.1 <b>Using docker & docker-compose</b> - this template is already set up to run the services with one command -> `yarn services`. the only thing that is required is having docker installed on your machine. please refer to [Docker website](https://docs.docker.com/get-docker/) for more information on how to install docker.
 

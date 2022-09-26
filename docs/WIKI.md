@@ -114,41 +114,21 @@ We probably will need to support older browsers:
 
 ## Production dependencies
 * Next Boost - for request client and SSR caching [next-boost docs]()
-    * @next-boost/hybrid-disk-cache - [@next-boost/hybrid-disk-cache]
-    * @next-boost/next-boost - [@next-boost/next-boost]
-    * @next-boost/redis-cache - [@next-boost/redis-cache]
-* @prisma/client
+    * @next-boost/hybrid-disk-cache - [@next-boost/hybrid-disk-cache]()
+    * @next-boost/next-boost - [@next-boost/next-boost]()
+    * @next-boost/redis-cache - [@next-boost/redis-cache]()
+* @prisma/client - [prisma.io](https://www.prisma.io/)
 * next
 * next-api-handler - [next-api-handler docs](https://github.com/Howard86/next-api-handler)
 * react
 * react-dom
 
 ## Development dependencies
-
 - `husky` & `lint-staged`: wrangle git hooks and run as npm scripts
 - `prettier`: automatic code formatter
 - `eslint`: code linter
 - `jest`: testing library
 
-## Styling/CSS lib
-
-SaSS with BEM naming convention <http://getbem.com/naming/>.
-
-## Project folder structure
-
-
-## Branch name convention
-
-- `<User story number>-<feature/fix>/<task#>-<task name>-<task name>`
-- ex: `34-feature/homepage-hero-banner`
-
-## Commit message name convention:
-- `#<task number>: changes that have been made`
-- ex: `#340: add Button component; remove console.log from Icon.tsx`
-## Dependency management
-
-- `nodejs` 16.16.0
-- `npm` 8.11.0
 
 ## Testing integration
 
@@ -158,71 +138,9 @@ SaSS with BEM naming convention <http://getbem.com/naming/>.
 
 - Components will be tested using `Jest & Enzym`, please refer [React official docs](https://reactjs.org/docs/testing-recipes.html) for examples on how to mock `DOM` rendering
 
-## Multiple language support
-we will support english/french/spanish to begin with.
-
 
 ## Setup eslint auto-fix on save
 Please refer to [eslint settings on VS code](https://daveceddia.com/vscode-use-eslintrc/)
 
-## Nvm auto switch and load script
 
-Add this to your terminal entrypoint after (ex: .bash_profile/.bashrc, .zprofile/.zshrc)
 
-``` bash
-    ### load nvm
-    function load-nvm {
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-    }
-
-    #nvm
-    load-nvm
-
-    #
-    # Run 'nvm use' automatically every time there's
-    # a .nvmrc file in the directory. Also, revert to default
-    # version when entering a directory without .nvmrc
-    #
-
-    enter_directory() {
-      if [[ $PWD == $PREV_PWD ]]; then
-        return
-        fi
-
-      PREV_PWD=$PWD
-      if [[ -f ".nvmrc" ]]; then
-        local nvmrc_node_version=$(nvm version "$(cat .nvmrc)")
-            if [ "$nvmrc_node_version" = "N/A" ]; then
-          nvm install
-        elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-          nvm use
-        fi
-        NVM_DIRTY=true
-      elif [[ $NVM_DIRTY = true ]]; then
-        nvm use default
-        NVM_DIRTY=false
-      fi
-    }
-
-    export PROMPT_COMMAND=enter_directory
-```
-
-## Pull request guide
-1. Click on the new pull request button
-  ![click on the new pull request button](./pr_1.png)
-2. Follow the form:
-  ![PR form](./pr_2.png)
-    1. Title of the related ticket.
-    2. The description have to contain all the done work in the particular branch
-      ```markdown
-        a. Implemented primary button component + styles
-        b. Implemented Landing Page component + styles + SSR
-        c. Refactored capitalize util function
-        d. add unit + e2e tests for: x,y,z components
-      ```
-    3. Please specify a reviewer. At all times there should be at least one reviewer.
-    4. Link work items. At all times there should be a ticket related to the current PR.
-    5. Unresolved comments and un linked merge request will be blocked
-    6. At merge the branch should be deleted
