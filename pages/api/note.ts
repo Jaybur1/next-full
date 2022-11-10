@@ -2,7 +2,7 @@
 import { RouterBuilder } from 'next-api-handler'
 
 import { prisma } from '@lib/prisma'
-import { TNote } from '@src/types'
+import { TNote } from '@src/types/note'
 
 const router = new RouterBuilder()
 

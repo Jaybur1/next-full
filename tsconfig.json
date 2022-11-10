@@ -5,7 +5,7 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@lib/*": ["lib/*"],
-      "@utils/*": ["src/_utils/index.ts"],
+      "@utils/*": ["src/_utils/*"],
       "@styles/*": ["styles/*"],
       "@assets/*": ["assets/*"],
       "@test/*": ["test/*"],
